@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@800&family=Fjalla+One&family=Merriweather+Sans:wght@800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  transition: 0.3s ease-in-out;
+}
+html,
+body {
+  padding: 0;
+  animation: fade 0.2s ease-in-out;
+  margin: 0;
+  background-color: rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  &:before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.active {
+  color: blue;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  height: 100px;
+}
+.heading {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 900;
+  margin-top: 100px;
+  font-stretch: ultra-expanded;
+}
+nav{
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.heading-upper{
+  font-size: 120px;
+}
+.nav-colored{
+  background: linear-gradient(90deg, rgba(63,120,251,1) 0%, rgba(255,0,0,1) 100%);
+}
+
+.nav-transparent{background: transparent;}
+
+@media (max-width: 799px){
+  .text-5xl{
+    font-size: 25px;
+  }
+  .text-9xl{
+    font-size: 100px;
+  }
+  .text-4xl{
+    font-size: 20px;
+  }
+  .heading-upper{
+    font-size: 90px;
+  }
+  #navbar-sticky{
+    background-color: rgba(83, 0, 139, 0.397);
+    font-size: 20px;
+  }
+}
+.transition-slideup{
+  animation: slideup 0.5s ease-in-out;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+ 
+}
+@keyframes slideup {
+  0%{
+    opacity: 0;
+    transform:translateY(100%);
+  }
+  100%{
+    transform:translateY(0%);
+  opacity: 1;
+  }
+}
+.transition-fade{
+  animation: fade 0.5s ease-in-out;
+  animation-duration: 1000ms;
+}
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.animate-character
+{
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #7700ff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade 1.2s, textclip 7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.land-card{
+  background: linear-gradient(45deg, #01000a, #fdfdfd1c);
+  padding: 15px;
+}
+.card-p{
+  padding-left: 65px;
+  filter: blur(1.5px);
+}
+.colorful-blur {
+
+  background-image: radial-gradient(circle, rgba(55,116,255,1) 0%, rgba(0,0,0,1) 80%);;
+  background-blend-mode:darken;
+}
+.transition-slideright{
+  animation: slideright 1s ease-in-out;
+}
+@keyframes slideright {
+  0%{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
